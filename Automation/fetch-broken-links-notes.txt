@@ -1,0 +1,10 @@
+import urllib2
+request = urllib2.Request('http://www.indianblooddonors.com/sr/cisco.html')
+request.get_method = lambda : 'HEAD'
+
+response = urllib2.urlopen(request)
+response.info().gettype()
+
+
+
+regex for hyper link (?i)<a([^>]+)>(.+?)</a>
